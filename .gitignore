@@ -1,0 +1,35 @@
+# .NET build output
+# Unanchored, since every project directory has its own pair.
+bin/
+obj/
+
+# Tests and build logs
+TestResults/
+*.trx
+*.binlog
+msbuild.log
+
+# Claude Code's own folder, its lock file and state the tool's, kept out of the tree.
+.claude/
+
+# IDEs
+.idea/
+*.DotSettings.user
+.vs/
+*.user
+*.suo
+.vscode/*
+!.vscode/launch.json
+!.vscode/tasks.json
+!.vscode/extensions.json
+
+# Operating system
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Local-only
+.ref/
+
+# Every picture a session makes while it works, which the owner reads and prunes by day (N 4.10).
+/.github/dump/
