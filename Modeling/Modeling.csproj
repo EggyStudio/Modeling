@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <!-- The library both engines reference from their own projects, which knows no engine (N 2.1). -->
+    <PropertyGroup>
+        <RootNamespace>Modeling</RootNamespace>
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <!-- Every public member has a summary (STYLE.md), so a missing one stops the build, as a cref that
+         names nothing does. -->
+    <PropertyGroup>
+        <GenerateDocumentationFile>true</GenerateDocumentationFile>
+        <WarningsAsErrors>$(WarningsAsErrors);CS1591;CS1574</WarningsAsErrors>
+    </PropertyGroup>
+
+</Project>

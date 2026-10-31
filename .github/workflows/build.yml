@@ -1,0 +1,51 @@
+# Every push and pull request. The module is built with warnings failing the build (NORM.md, N 6.1)
+# and its tests run on Linux, Windows and macOS, the systems the engines ship for (N 6.2).
+name: build
+
+# Documents are left out, the README apart, whose commands a reader follows.
+on:
+  push:
+    paths: ['**', '!.github/**.md', '!AGENTS.md', '!.github/assets/**']
+  pull_request:
+    paths: ['**', '!.github/**.md', '!AGENTS.md', '!.github/assets/**']
+
+permissions:
+  contents: read
+
+# A newer push to a branch cancels the run of the one before it, whose result nobody reads.
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: test (${{ matrix.os }})
+    strategy:
+      fail-fast: false
+      matrix:
+        # The images the engines' own jobs run on, Linux and macOS named rather than the latest
+        # labels, so a new release under a label changes nothing with no commit to show for it.
+        os: [ubuntu-24.04, windows-latest, macos-15]
+    runs-on: ${{ matrix.os }}
+    # The build took 4 seconds and the test 2 on a desktop from an empty package folder
+    # (dotnet build Modeling.slnx -warnaserror, dotnet test Modeling.Tests), so 30 minutes is reached
+    # only where a restore or a test hangs (N 6.8).
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+
+      - uses: actions/setup-dotnet@v6
+        with:
+          dotnet-version: '10.0.x'
+
+      - run: dotnet build Modeling.slnx -warnaserror
+
+      - run: dotnet test Modeling.Tests --no-build --logger trx --results-directory Modeling.Tests/TestResults
+
+      - uses: actions/upload-artifact@v7
+        # Kept for a job canceled as well as one that failed, since a cut-short run is the one to read.
+        if: failure() || cancelled()
+        with:
+          name: test-results-${{ matrix.os }}
+          path: Modeling.Tests/TestResults/
+          if-no-files-found: ignore

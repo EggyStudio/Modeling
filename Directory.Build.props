@@ -1,0 +1,15 @@
+<Project>
+
+    <!-- What every project of the module builds with. -->
+    <PropertyGroup>
+        <TargetFramework>net10.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+        <!-- As a submodule under an engine's modules folder, the module would otherwise take the
+             engine's Directory.Build.targets from the folders above, since MSBuild searches upward
+             for one apart from this file. Both engines have one. -->
+        <ImportDirectoryBuildTargets>false</ImportDirectoryBuildTargets>
+    </PropertyGroup>
+
+</Project>

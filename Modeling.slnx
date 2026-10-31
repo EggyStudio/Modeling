@@ -1,0 +1,9 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="AGENTS.md" />
+    <File Path="Directory.Build.props" />
+    <File Path="README.md" />
+  </Folder>
+  <Project Path="Modeling/Modeling.csproj" />
+  <Project Path="Modeling.Tests/Modeling.Tests.csproj" />
+</Solution>
