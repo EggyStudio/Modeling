@@ -1,0 +1,3 @@
+2026-11-01-item-5-chevron.webp | The wallpaper's three scans side by side at one height, the raw scan, scan2 turned straight and cleaned, and the small final tile, none of them meeting itself at its edges.
+2026-11-01-item-5-carpet.webp | The carpet's 1K color and normal, whole and with the middle 256 texels enlarged twice, the normal's slopes slight.
+2026-11-01-item-5-sets.webp | The two sets decoded from their KTX2 files, the wallpaper's albedo tiled twice each way at its repeat's shape of 17.7 by 26.4 cm, the carpet's albedo and normal tiled the same, and the strip at the wallpaper tile's left edge halfway down enlarged three times, a place whose copies lie only at the scan's edges.

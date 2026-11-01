@@ -1,0 +1,88 @@
+{
+  "entries": [
+    {
+      "name": "fleck-carpet",
+      "source": ".ref/TEXTURES/Rohner Carpet V3/1k",
+      "size": [
+        1024,
+        1024
+      ],
+      "albedo": {
+        "file": "Rohner_Carpet_v3_1k_Color.jpg"
+      },
+      "normal": {
+        "file": "Rohner_Carpet_v3_1k_Normal.jpg"
+      },
+      "roughness": 0.95,
+      "files": {
+        "albedo.ktx2": 1398560,
+        "normal.ktx2": 349968,
+        "surface.ktx2": 349952
+      },
+      "error": {
+        "albedo.ktx2": 45.3,
+        "normal.ktx2": 52.9,
+        "surface.ktx2": 54.2
+      },
+      "color": [
+        0.573,
+        0.4408,
+        0.3787
+      ],
+      "surface": [
+        1.0,
+        0.949,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "name": "chevron-wallpaper",
+      "source": ".ref/TEXTURES/RegularlyBlue_s Chevron Scan Resources",
+      "size": [
+        512,
+        1024
+      ],
+      "albedo": {
+        "file": "chevronscan2.png"
+      },
+      "roughness": 0.8,
+      "repeat": {
+        "across": [
+          4176,
+          9
+        ],
+        "down": [
+          -2,
+          6243
+        ],
+        "half_drop": true
+      },
+      "files": {
+        "albedo.ktx2": 699520,
+        "normal.ktx2": 175216,
+        "surface.ktx2": 175200
+      },
+      "error": {
+        "albedo.ktx2": 46.2,
+        "normal.ktx2": 99.0,
+        "surface.ktx2": 54.2
+      },
+      "color": [
+        0.9229,
+        0.8693,
+        0.831
+      ],
+      "surface": [
+        1.0,
+        0.8,
+        0.0,
+        0.0
+      ],
+      "meters": [
+        0.1768,
+        0.2643
+      ]
+    }
+  ]
+}

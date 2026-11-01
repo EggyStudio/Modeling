@@ -184,5 +184,4 @@ window alone shows.** The owner's word of 2026-10-30. By review.
 ## How the norm changes
 
 The reviewing session adds a rule alone when the rule comes with its check and no existing code
-breaks it. A rule that existing code breaks, or that touches what is the owner's (dependencies, the
-license, AGENTS.md, what the engines take), waits for the owner's word.
+breaks it. A rule that existing code breaks, or that touches what is the owner's (dependencies, the repository's terms, AGENTS.md, what the engines take), waits for the owner's word.

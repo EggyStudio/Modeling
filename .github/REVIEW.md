@@ -1,8 +1,17 @@
 # Review
 
-Reviewed up to `8dece28`, the repository's first commit, the license alone, made by the owner at
-12:02 on 2026-10-31. Nothing has been pushed by the reviewing session yet; the first push is item
-1's commit, after the previous build run of this repository has ended, which at birth means at once.
+Reviewed up to `6fb25bb`, item 2, pushed at 12:31 on 2026-10-31 with `a7da906`, item 1, after the
+owner's first commit, its run green at 12:35 on the three systems in about three minutes, the first
+of this repository. Both commits keep the form, the three-mark subject, one sentence, the owner's
+identity as author and committer, no trailer (N 7.2 and N 7.6 kept at the first commit); the library
+references no engine (N 2.1). The documents are the engines' with the engine's name replaced and the
+engine-only lines dropped, COMMITS.md the game's with N 7.1's pointer rule in place of the legacy
+branch line, .gitignore with the dump folder, .claude and .ref; AGENTS.md's devlog row carries no
+link until DEVLOG.md exists and its table of areas gains the rows item 2 adds. The skeleton sets
+ImportDirectoryBuildTargets false, since a submodule under modules/ would inherit an engine's
+Directory.Build.targets, makes a missing summary an error, loads the assembly by name in its one
+test, and build/version.sh prints 0.1.0; the strict build 0 warnings and 0 errors, the test passing.
+Before it `8dece28`, the owner's first commit alone.
 
 ## Now
 
@@ -14,22 +23,24 @@ that owns the code today; item 4 is each engine's session's. Among the six this 
 after Tools, since it needs no renderer and the levels and the landscape build on it.
 
 1. **The documents, one commit.** AGENTS.md on the game's shape (one paragraph saying what the
-module is and that no engine is referenced, N 2.1; the documents table with STYLE, COMMITS, REVIEW,
-NORM and DEVLOG; building and testing; Where things are with a row a folder; the conventions, the
-commit form among them), README.md (what the module is, how an engine takes it as a submodule,
-`dotnet build` and `dotnet test`), `.github/STYLE.md`, `COMMITS.md` and `CODE_OF_CONDUCT.md` as the
-engines' with the engine's name replaced, `.gitignore` of the engines' shape with `/.github/dump/`
-in it, `.gitattributes`. The game's AGENTS.md and the engines' documents are the models; nothing is
-written that the module does not have yet. This commit is the first test of the commit form here, N
-7.2 and N 7.6, read by the reviewing session before it is pushed.
+    module is and that no engine is referenced, N 2.1; the documents table with STYLE, COMMITS,
+    REVIEW, NORM and DEVLOG; building and testing; Where things are with a row a folder; the
+    conventions, the commit form among them), README.md (what the module is, how an engine takes it
+    as a submodule, `dotnet build` and `dotnet test`), `.github/STYLE.md`, `COMMITS.md` and
+    `CODE_OF_CONDUCT.md` as the engines' with the engine's name replaced, `.gitignore` of the
+    engines' shape with `/.github/dump/` in it, `.gitattributes`. The game's AGENTS.md and the
+    engines' documents are the models; nothing is written that the module does not have yet. This
+    commit is the first test of the commit form here, N 7.2 and N 7.6, read by the reviewing session
+    before it is pushed. Done at `a7da906`.
 
 2. **The skeleton, one commit after item 1.** `Modeling.slnx`, `Modeling/Modeling.csproj` as a class
-library on net10.0 with `Nullable` and `ImplicitUsings` in `Directory.Build.props`,
-`Modeling.Tests/` on xunit with one test that the library loads, `build/version.txt` at `0.1` and
-`build/version.sh` as the engines', and `.github/workflows/build.yml` on a push, `test (os)` on
-ubuntu-24.04, windows-latest and macos-15 with `dotnet build Modeling.slnx -warnaserror` and `dotnet
-test Modeling.Tests --no-build`, a time limit on every job with its reason, `permissions` read and
-the engines' concurrency group. Green on the three systems before item 3.
+    library on net10.0 with `Nullable` and `ImplicitUsings` in `Directory.Build.props`,
+    `Modeling.Tests/` on xunit with one test that the library loads, `build/version.txt` at `0.1`
+    and `build/version.sh` as the engines', and `.github/workflows/build.yml` on a push, `test (os)`
+    on ubuntu-24.04, windows-latest and macos-15 with `dotnet build Modeling.slnx -warnaserror` and
+    `dotnet test Modeling.Tests --no-build`, a time limit on every job with its reason,
+    `permissions` read and the engines' concurrency group. Green on the three systems before item 3.
+    Done at `6fb25bb`.
 
 3. **The code's move.** The source is both engines hold it under their Modeling folders in
 near-identical form; 3DEngine's is the source, read side by side with BevyCSharp's first and the
@@ -43,6 +54,19 @@ green and the owning session is free.
 this code becoming the binding of the module's interfaces (N 2.1) and the rest deleted; a change
 used by an engine is committed here first and pushed before the engine's commit that moves the
 pointer. One commit an engine, after item 3's first part.
+
+5. **Interior textures in the module's bounded collection.** The owner put two free texture sets
+   under BevyCSharp's reference folder on 2026-11-01, a carpet scan of eight JPEG files and a
+   chevron wallpaper scan of three PNG files, and chose at {hm} that textures live with the module
+   whose work they serve, these with the modeling as the tree and grass sets live with the
+   vegetation (Decision 8). They go into this repository as a bounded collection on BevyCSharp's
+   shape, a recipe a set naming the source files and what each channel is, the built files at 1K as
+   albedo, normal and roughness in the collection's format with their sizes and count said in the
+   README, the README's table naming each set's maker, Rohner for the carpet and RegularlyBlue for
+   the wallpaper, and nothing more said of the sets' terms anywhere, in no file and no commit, the
+   owner's word of 2026-11-01, and a test that each set loads with its channels; the recipe script
+   is BevyCSharp's build/textures.py read for a model, carried here until Tools holds it. The game's
+   session takes it, being free. One commit, no engine referenced.
 
 ## Verdicts
 
@@ -69,8 +93,8 @@ it needs of a renderer, a world, a scheduler or a file system it takes through i
 declares, which each engine implements where it binds the module. A type of an engine's in this
 repository is a fault.
 
-4. **The license is the owner's choice.** The repository was made with the Mozilla Public License
-2.0, which stands; the owner may say otherwise.
+4. **The repository's terms are the owner's.** The repository was made by the owner with its terms
+   file in place, which stands as the owner set it and is spoken of nowhere else.
 
 5. **Who writes here.** The game's session writes items 1 and 2 for the six modules, being free
 while the game waits on the engine's package; the session that owns the code today moves it (item
@@ -78,5 +102,12 @@ while the game waits on the engine's package; the session that owns the code tod
 session's scripts going into Tools; each engine's session binds the module (item 4). Every session
 reads REVIEW.md's head, its items and the Replies before a batch, as N 7.7 says, and the reviewing
 session pushes.
+
+8. **Textures live with the module whose work they serve.** The owner wrote on 2026-11-01 that free
+   carpet and wallpaper textures put under the reference folder may be converted and used in the
+   asset library being built, and asked whether they need a repository of their own or belong with
+   the modeling as the tree and grass textures belong with the vegetation, thinking the latter best;
+   so it is, interior and architectural sets here, plants in Vegetation, and a Materials repository
+   only if the library grows past what a module's folder should hold.
 
 ## Replies
