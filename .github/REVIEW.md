@@ -2,27 +2,27 @@
 
 Reviewed up to `6fb25bb`, item 2, pushed at 12:31 on 2026-10-31 with `a7da906`, item 1, after the
 owner's first commit, its run green at 12:35 on the three systems in about three minutes, the first
-of this repository. After it `883d624`, item 5, pushed at 12:15 on 2026-11-01, its run awaited, the
-two texture sets as Textures/fleck-carpet and Textures/chevron-wallpaper, each an albedo in BC7
-sRGB, a normal in BC5 and a surface in BC7 with the roughness in green, with textures.json giving
-the recipes, sizes, error, mean color and surface, build/textures.py carried from BevyCSharp's with
-the leaf and bark parts dropped, a README section with the channel and set tables, TexturesTests and
-three captioned readings; the carpet's albedo 1024 square and the wallpaper's 512 by 1024, 3.0 MB
-together, the levels kept without zstd so the engine's reader takes them; the wallpaper built from
-one scan's half-drop repeat since none of its three files tiles at its edges, the tile 0.1768 by
-0.2643 m at the file's 600 dpi; the carried BC7 encoder mended for opaque blocks whose shared bit
-went to the color; the carpet's roughness 0.95 and the paper's 0.8 with a flat normal, no source
-holding a roughness map; 4 of 4 tests, two builds byte for byte the same. Both commits keep the
-form, the three-mark subject, one sentence, the owner's identity as author and committer, no trailer
-(N 7.2 and N 7.6 kept at the first commit); the library references no engine (N 2.1). The documents
-are the engines' with the engine's name replaced and the engine-only lines dropped, COMMITS.md the
-game's with N 7.1's pointer rule in place of the legacy branch line, .gitignore with the dump
-folder, .claude and .ref; AGENTS.md's devlog row carries no link until DEVLOG.md exists and its
-table of areas gains the rows item 2 adds. The skeleton sets ImportDirectoryBuildTargets false,
-since a submodule under modules/ would inherit an engine's Directory.Build.targets, makes a missing
-summary an error, loads the assembly by name in its one test, and build/version.sh prints 0.1.0; the
-strict build 0 warnings and 0 errors, the test passing. Before it `8dece28`, the owner's first
-commit alone.
+of this repository. After it `883d624`, item 5, pushed at 12:15 on 2026-11-01, its run green at 12:17, the two texture sets as Textures/fleck-carpet and Textures/chevron-wallpaper, each an albedo
+in BC7 sRGB, a normal in BC5 and a surface in BC7 with the roughness in green, with textures.json
+giving the recipes, sizes, error, mean color and surface, build/textures.py carried from
+BevyCSharp's with the leaf and bark parts dropped, a README section with the channel and set tables,
+TexturesTests and three captioned readings; the carpet's albedo 1024 square and the wallpaper's 512
+by 1024, 3.0 MB together, the levels kept without zstd so the engine's reader takes them; the
+wallpaper built from one scan's half-drop repeat since none of its three files tiles at its edges,
+the tile 0.1768 by 0.2643 m at the file's 600 dpi; the carried BC7 encoder mended for opaque blocks
+whose shared bit went to the color; the carpet's roughness 0.95 and the paper's 0.8 with a flat
+normal, no source holding a roughness map; 4 of 4 tests, two builds byte for byte the same. Both
+commits keep the form, the three-mark subject, one sentence, the owner's identity as author and
+committer, no trailer (N 7.2 and N 7.6 kept at the first commit); the library references no engine
+(N 2.1). The documents are the engines' with the engine's name replaced and the engine-only lines
+dropped, COMMITS.md the game's with N 7.1's pointer rule in place of the legacy branch line,
+.gitignore with the dump folder, .claude and .ref; AGENTS.md's devlog row carries no link until
+DEVLOG.md exists and its table of areas gains the rows item 2 adds. The skeleton sets
+ImportDirectoryBuildTargets false, since a submodule under modules/ would inherit an engine's
+Directory.Build.targets, makes a missing summary an error, loads the assembly by name in its one
+test, and build/version.sh prints 0.1.0; the strict build 0 warnings and 0 errors, the test passing.
+Before it `8dece28`, the owner's first commit alone. After it `2abb761`, the build folder's row in
+AGENTS.md naming textures.py, pushed at 12:18, its run green at 12:20.
 
 ## Now
 
