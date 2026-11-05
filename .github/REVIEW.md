@@ -2,7 +2,8 @@
 
 Reviewed up to `6fb25bb`, item 2, pushed at 12:31 on 2026-10-31 with `a7da906`, item 1, after the
 owner's first commit, its run green at 12:35 on the three systems in about three minutes, the first
-of this repository. After it `883d624`, item 5, pushed at 12:15 on 2026-11-01, its run green at 12:17, the two texture sets as Textures/fleck-carpet and Textures/chevron-wallpaper, each an albedo
+of this repository. After it `883d624`, item 5, pushed at 12:15 on 2026-11-01, its run green at
+12:17, the two texture sets as Textures/fleck-carpet and Textures/chevron-wallpaper, each an albedo
 in BC7 sRGB, a normal in BC5 and a surface in BC7 with the roughness in green, with textures.json
 giving the recipes, sizes, error, mean color and surface, build/textures.py carried from
 BevyCSharp's with the leaf and bark parts dropped, a README section with the channel and set tables,
@@ -21,8 +22,10 @@ DEVLOG.md exists and its table of areas gains the rows item 2 adds. The skeleton
 ImportDirectoryBuildTargets false, since a submodule under modules/ would inherit an engine's
 Directory.Build.targets, makes a missing summary an error, loads the assembly by name in its one
 test, and build/version.sh prints 0.1.0; the strict build 0 warnings and 0 errors, the test passing.
-Before it `8dece28`, the owner's first commit alone. After it `2abb761`, the build folder's row in
-AGENTS.md naming textures.py, pushed at 12:18, its run green at 12:20.
+After it `c72ae9c`, the norm and the review's head alone, pushed at 14:51 on 2026-11-03, with no run
+since the build passes over the review's files; it keeps the form. Before it `8dece28`, the owner's
+first commit alone. After it `2abb761`, the build folder's row in AGENTS.md naming textures.py,
+pushed at 12:18, its run green at 12:20.
 
 ## Now
 
